@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { BeerBottle } from './BeerBottle';
 import styles from "./styles.module.scss"
 
 interface HeaderProps {
