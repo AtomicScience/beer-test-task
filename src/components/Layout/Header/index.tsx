@@ -1,5 +1,4 @@
 import * as React from "react";
-import { BeerBottle } from "./BeerBottle";
 import styles from "./styles.module.scss";
 
 interface HeaderProps {
@@ -7,8 +6,9 @@ interface HeaderProps {
 }
 
 export const Header: React.FunctionComponent<HeaderProps> = () => {
-  return <nav className={ styles.header }>
-    <BeerBottle></BeerBottle>
-    <h1>BeerHUB</h1>
-  </nav>;
+  return <header className={ styles.header }>
+    <div className={ styles.header_page_wrapper }>
+      <a>BeerHUB</a>
+    </div>
+  </header>;
 };

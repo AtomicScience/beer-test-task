@@ -1,0 +1,34 @@
+@use "src/constants" as *;
+
+.header {
+  a {
+    display: inline-block;
+    font-size: 2rem;
+
+    color: white;
+    font-weight: bold;
+
+    font-variant: "NimbusSans-Bold"
+  }
+
+  .header_page_wrapper {
+    margin: 10px;
+    max-width: 1096px;
+    display: flex;
+    justify-content: left;
+
+    flex-grow: 1;
+  }
+
+  background-color: $dark-gray;
+  border: 10px $charcoal;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
