@@ -9,4 +9,4 @@ export const Layout: React.FunctionComponent<LayoutProps> = (props) => {
 	return <>
 		<Header/>
 	</>;
-}
+};

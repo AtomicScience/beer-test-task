@@ -36,8 +36,10 @@
         "semi": [
             "error",
             "always",
-            { "omitLastInOneLineBlock": true },
-            
+            { "omitLastInOneLineBlock": true }
+        ],
+        "@typescript-eslint/no-empty-interface": [
+          "off"
         ]
     }
 }
