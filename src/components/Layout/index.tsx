@@ -5,8 +5,8 @@ interface LayoutProps {
 
 } 
 
-export const Layout: React.FunctionComponent<LayoutProps> = (props) => {
-	return <>
-		<Header/>
-	</>;
+export const Layout: React.FunctionComponent<LayoutProps> = () => {
+  return <>
+    <Header/>
+  </>;
 };
