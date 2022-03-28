@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { useSingleBeer } from "../../services/useSingleBeer";
+import { useSingleBeer } from "../../hooks/useSingleBeer";
 import { ResponseStatus } from "../../types/ResponseStatus";
 import styles from "./styles.module.scss";
 
