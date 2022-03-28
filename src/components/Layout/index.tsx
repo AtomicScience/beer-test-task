@@ -6,11 +6,9 @@ interface LayoutProps {
 
 } 
 
-export const Layout: React.FunctionComponent<LayoutProps> = (props) => {
+export const Layout: React.FunctionComponent<LayoutProps> = () => {
   return <div className={ styles.page }>
     <Header/>
-    <ContentWrapper>
-      { props.children }
-    </ContentWrapper>
+    <ContentWrapper/>
   </div>;
 };
