@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 import { ResponseStatus } from "../types/ResponseStatus";
 import { Beer } from "../types/Beer";
 
-export const useBeerList = () => {
+export const useSingleBeer = (beerId : number) => {
   const [requestStatus, setRequestStatus] = React.useState(ResponseStatus.PENDING);
   const [data, setData] = React.useState([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const result = await axios("https://api.punkapi.com/v2/beers");
+        const result = await axios(`https://api.punkapi.com/v2/beers/${beerId}`);
 
         setRequestStatus(ResponseStatus.SUCCESS);
         setData(result.data);
