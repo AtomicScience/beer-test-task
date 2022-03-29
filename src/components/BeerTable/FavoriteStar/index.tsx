@@ -9,8 +9,6 @@ interface FavoriteStarProps {
 
 export const FavoriteStar: React.FunctionComponent<FavoriteStarProps> = (props) => {
   const cls = `pi pi-star${props.isFavorited ? "-fill" : ""}`;
-  
-  console.log(props);
 
   return <i 
     onClick={(e) => {
