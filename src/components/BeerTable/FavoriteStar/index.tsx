@@ -1,13 +1,22 @@
-import * as React from "react";
+import React, { useState } from "react";
+import { Beer } from "../../../types/Beer";
 
-export const FavoriteStar: React.FunctionComponent<any> = (props) => {
-  const className = props.state ? "pi pi-star-fill" : "pi pi-star";
+interface FavoriteStarProps {
+  beer: Beer,
+  isFavorited: boolean,
+  callback: (beer : Beer) => void,
+}
+
+export const FavoriteStar: React.FunctionComponent<FavoriteStarProps> = (props) => {
+  const cls = `pi pi-star${props.isFavorited ? "-fill" : ""}`;
   
+  console.log(props);
+
   return <i 
     onClick={(e) => {
+      props.callback(props.beer);
       e.stopPropagation();
-      props.onClick(props.data, props.state);
     }} 
-    className={ className }
+    className={ cls }
   />;
 };

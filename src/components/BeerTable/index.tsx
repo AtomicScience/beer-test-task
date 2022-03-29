@@ -7,6 +7,8 @@ import { Column } from "primereact/column";
 import { useBeerListPaginated } from "../../hooks/useBeerListPaginated";
 import { useNavigate } from "react-router-dom";
 import { FavoriteStar } from "./FavoriteStar";
+import { useBeersFavorited } from "../../hooks/useBeersFavorited";
+import { Beer } from "../../types/Beer";
 
 const PAGE_SIZE = 20;
 interface BeerTableProps {
@@ -17,7 +19,13 @@ export const BeerTable: React.FunctionComponent<BeerTableProps> = () => {
   const navigate = useNavigate();
 
   const [first, setFirst] = React.useState(0);
-  const [responseStatus, beerList] = useBeerListPaginated(first, PAGE_SIZE);
+  const [, beerList] = useBeerListPaginated(first, PAGE_SIZE);
+
+  const [isBeerFavorited, , toggleBeerFavorited] = useBeersFavorited();
+
+  const favoriteButtonBuilder = (beer : Beer) => {
+    return <FavoriteStar callback={toggleBeerFavorited} beer={beer} isFavorited={isBeerFavorited(beer)}/>;
+  };
 
   return <>
     <DataTable 
@@ -30,7 +38,7 @@ export const BeerTable: React.FunctionComponent<BeerTableProps> = () => {
       stateStorage="session" stateKey="dt-state-demo-session"
       onRowClick={(e) => navigate(`/beer/${e.data.id}`)}
     >
-      <Column header="" body={ FavoriteStar }/>
+      <Column header="" body={ favoriteButtonBuilder }/>
       <Column field="name" header="Name"/>
       <Column field="tagline" header="Tagline"/>
     </DataTable>
