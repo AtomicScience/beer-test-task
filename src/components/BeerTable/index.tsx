@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./rawStyle.scss";
-import styles from "./styles.module.scss";
 
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
