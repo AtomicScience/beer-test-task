@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useSingleBeer } from "../../hooks/useSingleBeer";
 import { ResponseStatus } from "../../types/ResponseStatus";
 import { BeerInfo } from "./BeerInfo";
-import styles from "./styles.module.scss";
 
 interface BeerInfoHOCProps {
 
