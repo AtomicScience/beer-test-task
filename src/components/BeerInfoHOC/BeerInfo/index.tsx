@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useBeersFavorited } from "../../../hooks/useBeersFavorited";
-import { Beer } from "../../../types/Beer";
 import { BeerDetailed } from "../../../types/BeerDetailed";
 import { FavoriteStar } from "../../FavoriteStar";
 import styles from "./styles.module.scss";
