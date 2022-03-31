@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import lodash from "lodash";
-import { RootState } from "./store";
 
 interface FavoriteSliceState {
   favoritedIds : number[]
@@ -11,7 +10,7 @@ const initialState : FavoriteSliceState = {
 };
 
 export const slice = createSlice({
-  name: "counter",
+  name: "favoritedBeer",
   initialState,
   reducers: {
     add: (state, action : PayloadAction<number>) => {
