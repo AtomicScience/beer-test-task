@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { ResponseStatus } from "../types/ResponseStatus";
-import { Beer } from "../types/Beer";
 import { unstable_batchedUpdates } from "react-dom";
+import { BeerDetailed } from "../types/BeerDetailed";
 
 export const useSingleBeer = (beerId : number | undefined) => {
   const [requestStatus, setRequestStatus] = React.useState(ResponseStatus.PENDING);
@@ -34,5 +34,5 @@ export const useSingleBeer = (beerId : number | undefined) => {
     })();
   }, [beerId]);
 
-  return [requestStatus, data[0]] as [ResponseStatus, Beer];
+  return [requestStatus, data[0]] as [ResponseStatus, BeerDetailed];
 };

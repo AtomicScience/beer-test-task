@@ -5,7 +5,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { useBeerListPaginated } from "../../hooks/useBeerListPaginated";
 import { useNavigate } from "react-router-dom";
-import { FavoriteStar } from "./FavoriteStar";
+import { FavoriteStar } from "../FavoriteStar";
 import { useBeersFavorited } from "../../hooks/useBeersFavorited";
 import { Beer } from "../../types/Beer";
 
